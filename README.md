@@ -1,4 +1,4 @@
-# monolog-gdpr
+# monolog-gdpr [![Build Status](https://travis-ci.org/egeniq/monolog-gdpr.svg?branch=develop)](https://travis-ci.org/egeniq/monolog-gdpr)
 Some Monolog processors that will help in relation to the security requirements under GDPR.
 These processors will replace data with their SHA-1 equivalent, allowing you still to search 
 logs

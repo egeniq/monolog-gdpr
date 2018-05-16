@@ -1,8 +1,8 @@
 {
-  "name": "andriesss/monolog-gdpr",
+  "name": "egeniq/monolog-gdpr",
   "description": "Some Monolog processors that will help in relation to the security requirements under GDPR.",
   "keywords": ["log", "logger", "monolog", "processor", "gdpr", "avg"],
-  "homepage": "https://github.com/andriesss/monolog-gdpr",
+  "homepage": "https://github.com/egeniq/monolog-gdpr",
   "type": "library",
   "license": "MIT",
   "require": {
@@ -12,9 +12,9 @@
     "phpunit/phpunit": "^4.8"
   },
   "autoload": {
-    "psr-4": {"Anse\\Monolog\\Gdpr\\": "src/"}
+    "psr-4": {"Egeniq\\Monolog\\Gdpr\\": "src/"}
   },
   "autoload-dev": {
-    "psr-4": {"Anse\\Monolog\\Gdpr\\": "tests/"}
+    "psr-4": {"Egeniq\\Monolog\\Gdpr\\": "tests/"}
   }
 }

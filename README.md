@@ -30,7 +30,7 @@ Usage:
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
-use Anse\Monolog\Gdpr\Processor\RedactEmailProcessor;
+use Egeniq\Monolog\Gdpr\Processor\RedactEmailProcessor;
 
 $log = new Logger('name');
 $log->pushHandler(new StreamHandler('path/to/your.log', Logger::WARNING));
@@ -53,7 +53,7 @@ Usage:
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
-use Anse\Monolog\Gdpr\Processor\RedactIpProcessor;
+use Egeniq\Monolog\Gdpr\Processor\RedactIpProcessor;
 
 $log = new Logger('name');
 $log->pushHandler(new StreamHandler('path/to/your.log', Logger::WARNING));

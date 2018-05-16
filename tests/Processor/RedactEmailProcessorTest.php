@@ -1,6 +1,6 @@
 <?php
 
-namespace Anse\Monolog\Gdpr\Processor;
+namespace Egeniq\Monolog\Gdpr\Processor;
 
 use Monolog\Handler\TestHandler;
 use Monolog\Logger;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Anse\Monolog\Gdpr\Processor;
+namespace Egeniq\Monolog\Gdpr\Processor;
 
 class RedactIpProcessor extends AbstractProcessor
 {

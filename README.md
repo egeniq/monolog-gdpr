@@ -12,6 +12,14 @@ Install the latest version with
 $ composer require andriesss/monolog-gdpr
 ```
 
+## Salted hashes
+This library supports salted hashes using `processor->setSalt(<salt>)`. To compute your hashed 
+value you could use the following bash command:
+
+```bash
+$ echo -n 'foo@bar.com<YourSalt>' | openssl sha1
+```
+
 ## RedactEmailProcessor
 Replaces all e-mail addresses by their SHA-1 hash.
 

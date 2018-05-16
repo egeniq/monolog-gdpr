@@ -1,5 +1,5 @@
 {
-  "name": "anse/monolog-gdpr",
+  "name": "andriesss/monolog-gdpr",
   "description": "Some Monolog processors that will help in relation to the security requirements under GDPR.",
   "keywords": ["log", "logger", "monolog", "processor", "gdpr", "avg"],
   "homepage": "https://github.com/andriesss/monolog-gdpr",

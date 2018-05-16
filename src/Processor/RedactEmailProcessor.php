@@ -2,7 +2,7 @@
 
 namespace Anse\Monolog\Gdpr\Processor;
 
-class RedactEmailProcessor
+class RedactEmailProcessor extends AbstractProcessor
 {
     /**
      * @param array $record
@@ -17,7 +17,7 @@ class RedactEmailProcessor
         $filtered = preg_replace_callback(
             "/([a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`\"\"{|}~-]+)*(@|\sat\s)(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(\.|\"\"\sdot\s))+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)/",
             function ($matches) {
-                return sha1($matches[0]);
+                return $this->getHashedValue($matches[0]);
             },
             $serialised
         );

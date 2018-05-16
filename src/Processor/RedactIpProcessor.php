@@ -2,7 +2,7 @@
 
 namespace Anse\Monolog\Gdpr\Processor;
 
-class RedactIpProcessor
+class RedactIpProcessor extends AbstractProcessor
 {
     /**
      * @param array $record
@@ -17,7 +17,7 @@ class RedactIpProcessor
         $filtered = preg_replace_callback(
             "/(\b\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3}\b)/",
             function($matches) {
-                return sha1($matches[0]);
+                return $this->getHashedValue($matches[0]);
             },
             $serialised
         );

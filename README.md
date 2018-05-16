@@ -10,7 +10,7 @@ Replaces all e-mail addresses by their SHA-1 hash.
 
 Usage:
 
-```
+```PHP
 <?php
 
 use Monolog\Logger;
@@ -29,7 +29,7 @@ Replaces all ipv4 addresses by their SHA-1 hash.
 
 Usage:
 
-```
+```PHP
 <?php
 
 use Monolog\Logger;

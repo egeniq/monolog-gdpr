@@ -5,6 +5,13 @@ logs
 
 WARNING: These processors will json serialise your `$context`. This may cause some undesired side-effects.
 
+## Installation
+Install the latest version with
+
+```
+$ composer require andriesss/monolog-gdpr
+```
+
 ## RedactEmailProcessor
 Replaces all e-mail addresses by their SHA-1 hash.
 

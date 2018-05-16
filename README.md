@@ -9,7 +9,7 @@ WARNING: These processors will json serialise your `$context`. This may cause so
 Install the latest version with
 
 ```
-$ composer require andriesss/monolog-gdpr
+$ composer require egeniq/monolog-gdpr
 ```
 
 ## Salted hashes

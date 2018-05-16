@@ -66,3 +66,6 @@ $log->pushProcessor($processor);
 
 $log->log(Logger::DEBUG, 'This is a test for 127.0.0.1', ['foo' => ['bar' => '127.0.0.1']]);
 ```
+
+## License
+Package is licensed under the MIT License - see the LICENSE file for details

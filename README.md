@@ -26,7 +26,11 @@ use Anse\Monolog\Gdpr\Processor\RedactEmailProcessor;
 
 $log = new Logger('name');
 $log->pushHandler(new StreamHandler('path/to/your.log', Logger::WARNING));
-$log->pushProcessor(new RedactEmailProcessor());
+
+$processor = new RedactEmailProcessor();
+// optionally you may configure a salt:
+$processor->setSalt('h@tsefl@ts!');
+$log->pushProcessor($processor);
 
 $log->log(Logger::DEBUG, 'This is a test for foo@bar.com', ['foo' => ['bar' => 'foo@bar.com']]);
 ```
@@ -45,7 +49,12 @@ use Anse\Monolog\Gdpr\Processor\RedactIpProcessor;
 
 $log = new Logger('name');
 $log->pushHandler(new StreamHandler('path/to/your.log', Logger::WARNING));
-$log->pushProcessor(new RedactIpProcessor());
+
+$processor = new RedactIpProcessor();
+
+// optionally you may configure a salt:
+$processor->setSalt('h@tsefl@ts!');
+$log->pushProcessor($processor);
 
 $log->log(Logger::DEBUG, 'This is a test for 127.0.0.1', ['foo' => ['bar' => '127.0.0.1']]);
 ```

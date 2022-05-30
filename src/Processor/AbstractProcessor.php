@@ -2,7 +2,9 @@
 
 namespace Egeniq\Monolog\Gdpr\Processor;
 
-abstract class AbstractProcessor
+use Monolog\Processor\ProcessorInterface;
+
+abstract class AbstractProcessor implements ProcessorInterface
 {
     /**
      * @var null|string
@@ -16,8 +18,6 @@ abstract class AbstractProcessor
     {
         $this->salt = $salt;
     }
-
-    abstract public function __invoke(array $record): array;
 
     /**
      * @param string $value

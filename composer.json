@@ -6,10 +6,10 @@
   "type": "library",
   "license": "MIT",
   "require": {
-    "monolog/monolog": "^1.17"
+    "monolog/monolog": "^1.17|^2.0"
   },
   "require-dev": {
-    "phpunit/phpunit": "^4.8"
+    "phpunit/phpunit": "^8.5"
   },
   "autoload": {
     "psr-4": {"Egeniq\\Monolog\\Gdpr\\": "src/"}

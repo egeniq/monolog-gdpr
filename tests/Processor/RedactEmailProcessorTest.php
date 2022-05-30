@@ -67,4 +67,20 @@ class RedactEmailProcessorTest extends TestCase
             $records[0]['context']
         );
     }
+
+    public function testEmailIsRedactedInProblematicString()
+    {
+        $this->logger->log(Logger::DEBUG, '(1,	\'foo@bar.com\')', ['foo' => ['bar' => 'foo@bar.com']]);
+        $records = $this->handler->getRecords();
+
+        $this->assertEquals('(1,	40d36e2e19ba403439bdf6ad32d294d530ff0ec7\')', $records[0]['message']);
+        $this->assertEquals(
+            [
+                'foo' => [
+                    'bar' => '823776525776c8f23a87176c59d25759da7a52c4'
+                ]
+            ],
+            $records[0]['context']
+        );
+    }
 }

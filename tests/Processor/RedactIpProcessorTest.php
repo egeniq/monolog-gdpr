@@ -4,8 +4,9 @@ namespace Egeniq\Monolog\Gdpr\Processor;
 
 use Monolog\Handler\TestHandler;
 use Monolog\Logger;
+use PHPUnit\Framework\TestCase;
 
-class RedactIpProcessorTest extends \PHPUnit_Framework_TestCase
+class RedactIpProcessorTest extends TestCase
 {
     /**
      * @var TestHandler
@@ -22,7 +23,7 @@ class RedactIpProcessorTest extends \PHPUnit_Framework_TestCase
      */
     private $processor;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->processor = new RedactIpProcessor();
 

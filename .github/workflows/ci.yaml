@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push: ~
+  pull_request: ~
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    name: "PHP ${{ matrix.php }}, Monolog ${{ matrix.monolog }}"
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ "7.4", "8.0", "8.1" ]
+        monolog: [ "^1.17", "^2.0" ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "${{ matrix.php }}"
+          tools: composer
+
+      - name: Restrict Monolog
+        run: "composer require --no-install monolog/monolog=${{ matrix.monolog }}"
+
+      - name: Install dependencies
+        run: composer install --prefer-dist
+
+      - name: Run PHPUnit
+        run: vendor/bin/phpunit --colors=always
